@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="bird">
+    <div id="angry-bird" class="make-bird">
         <div class="tail-middle"></div>
         <div class="tail-top"></div>
         <div class="tail-bottom"></div>
@@ -25,7 +25,22 @@
         <div class="eye-left"></div>
         <div class="beak"></div>
     </div>
+    <button id="changeBirdButton" class="button">Click me</button>
 
+    <script>
+        // Get references to the elements
+        const birdDiv = document.getElementById("angry-bird");
+        const button = document.getElementById("changeBirdButton");
+
+        // Function to toggle the classes
+        function toggleBirdClasses() {
+            birdDiv.classList.toggle("make-bird");
+            birdDiv.classList.toggle("bird");
+        }
+
+        // Add a click event listener to the button and call the toggle function
+        button.addEventListener("click", toggleBirdClasses);
+    </script>
 </body>
 
 </html>
